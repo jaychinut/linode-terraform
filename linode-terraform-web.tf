@@ -16,7 +16,7 @@ resource "linode_instance" "terraform-dash" {
         group = "HNS-frontend"
         region = "us-east"
         type = "g6-nanode-1"
-        #tags = "frontend"
+        tags = [ "frontend" ]
         authorized_keys = [ var.ssh_keys_jayson ]
         root_pass = var.root_pass
 }
@@ -27,7 +27,7 @@ resource "linode_instance" "terraform-ns1" {
         group = "HNS-backend"
         region = "us-east"
         type = "g6-nanode-1"
-        #tags = "frontend"
+        tags = [ "backend" ]
         authorized_keys = [ var.ssh_keys_jayson ]
         root_pass = var.root_pass
 }
@@ -38,7 +38,7 @@ resource "linode_instance" "terraform-ns2" {
         group = "HNS-backend"
         region = "us-central"
         type = "g6-nanode-1"
-        #tags = "frontend"
+        tags = [ "backend" ]
         authorized_keys = [ var.ssh_keys_jayson ]
         root_pass = var.root_pass
 }

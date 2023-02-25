@@ -1,3 +1,8 @@
-#Apply variables
-terraform apply \
--var-file=secrets.tfvars
+#Here are the commands to run using the secrets.tfvars file in your local repository that's ignored by git.
+
+#Plan
+terraform plan -var-file=secrets.tfvars
+#Apply
+terraform apply -var-file=secrets.tfvars
+#Destroy
+terraform destroy -var-file=secrets.tfvars
